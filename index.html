@@ -1,0 +1,1647 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Найсдорстрой - каталог спецтехники</title>
+  <meta name="description" content="Каталог фронтальных, телескопических и мини-погрузчиков для строительства от компании Найсдорстрой в Екатеринбурге.">
+</head>
+<body>
+  
+<style>
+  body {
+    margin: 0;
+    background: #f4f6f8;
+  }
+
+  .ns-site,
+  .ns-site * {
+    box-sizing: border-box;
+  }
+
+  .ns-site {
+    --ns-bg: #f4f6f8;
+    --ns-surface: #ffffff;
+    --ns-surface-2: #eef2f6;
+    --ns-text: #171a1d;
+    --ns-muted: #626b75;
+    --ns-line: #dce3ea;
+    --ns-dark: #2f3338;
+    --ns-orange: #ff5a14;
+    --ns-orange-dark: #d64608;
+    --ns-blue: #2f6f9f;
+    --ns-green: #47775f;
+    --ns-shadow: 0 18px 45px rgba(31, 39, 48, .12);
+    overflow-x: hidden;
+    color: var(--ns-text);
+    background: var(--ns-bg);
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    line-height: 1.45;
+  }
+
+  .ns-site a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ns-site img,
+  .ns-site svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  .ns-wrap {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  .ns-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, .94);
+    border-bottom: 1px solid var(--ns-line);
+    backdrop-filter: blur(14px);
+  }
+
+  .ns-header__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 22px;
+    min-height: 76px;
+    min-width: 0;
+  }
+
+  .ns-logo {
+    width: 138px;
+    height: 42px;
+    object-fit: contain;
+  }
+
+  .ns-nav {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .ns-nav a {
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: var(--ns-muted);
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .ns-nav a:hover,
+  .ns-nav a:focus-visible {
+    color: var(--ns-text);
+    background: var(--ns-surface-2);
+    outline: none;
+  }
+
+  .ns-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ns-phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 16px;
+    border: 1px solid var(--ns-dark);
+    border-radius: 6px;
+    color: var(--ns-dark);
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .ns-button,
+  .ns-icon-button {
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .ns-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 20px;
+    border-radius: 6px;
+    background: var(--ns-orange);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    box-shadow: 0 12px 24px rgba(255, 90, 20, .22);
+  }
+
+  .ns-button:hover,
+  .ns-button:focus-visible {
+    background: var(--ns-orange-dark);
+    transform: translateY(-1px);
+    outline: none;
+  }
+
+  .ns-button--ghost {
+    background: #fff;
+    color: #171a1d !important;
+    border: 1px solid rgba(255, 255, 255, .72);
+    box-shadow: none;
+  }
+
+  .ns-button--ghost:hover,
+  .ns-button--ghost:focus-visible {
+    background: #fff;
+    color: #171a1d !important;
+  }
+
+  .ns-button--dark {
+    background: var(--ns-dark);
+    box-shadow: none;
+  }
+
+  .ns-button--wide {
+    width: 100%;
+  }
+
+  .ns-hero {
+    position: relative;
+    min-height: 76vh;
+    display: grid;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+      linear-gradient(90deg, rgba(18, 23, 29, .9), rgba(18, 23, 29, .62) 48%, rgba(18, 23, 29, .12)),
+      url("assets/hero-t3000.jpeg") center / cover no-repeat;
+  }
+
+  .ns-hero__art {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .82;
+  }
+
+  .ns-hero__art svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ns-hero__inner {
+    padding: 92px 0 84px;
+  }
+
+  .ns-eyebrow {
+    margin: 0 0 14px;
+    color: #ffd8c8;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  .ns-hero h1 {
+    width: min(680px, 100%);
+    margin: 0;
+    font-size: clamp(42px, 8vw, 86px);
+    line-height: .92;
+    letter-spacing: 0;
+  }
+
+  .ns-hero__text {
+    width: min(640px, 100%);
+    max-width: 100%;
+    margin: 22px 0 0;
+    color: rgba(255, 255, 255, .88);
+    font-size: clamp(17px, 2vw, 22px);
+  }
+
+  .ns-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .ns-hero__facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    width: min(720px, 100%);
+    margin-top: 46px;
+  }
+
+  .ns-fact {
+    min-height: 92px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, .22);
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(12px);
+    border-radius: 8px;
+  }
+
+  .ns-fact b {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 26px;
+    line-height: 1;
+  }
+
+  .ns-fact span {
+    color: rgba(255, 255, 255, .76);
+    font-size: 13px;
+  }
+
+  .ns-section {
+    padding: 76px 0;
+  }
+
+  .ns-section--white {
+    background: #fff;
+  }
+
+  .ns-section--dark {
+    background: var(--ns-dark);
+    color: #fff;
+  }
+
+  .ns-section-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(260px, .75fr);
+    gap: 34px;
+    align-items: end;
+    margin-bottom: 30px;
+  }
+
+  .ns-section-head h2 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.06;
+    letter-spacing: 0;
+  }
+
+  .ns-section-head p {
+    margin: 0;
+    color: var(--ns-muted);
+    font-size: 16px;
+  }
+
+  .ns-section--dark .ns-section-head p {
+    color: rgba(255, 255, 255, .74);
+  }
+
+  .ns-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .ns-category-card {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #1f252c;
+    isolation: isolate;
+  }
+
+  .ns-category-card__visual {
+    position: absolute;
+    inset: 0;
+    opacity: .9;
+    transform: scale(1.03);
+    transition: transform .35s ease, opacity .35s ease;
+  }
+
+  .ns-category-card__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ns-category-card:hover .ns-category-card__visual {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  .ns-category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(12, 15, 19, .04), rgba(12, 15, 19, .88));
+  }
+
+  .ns-category-card__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 24px;
+    color: #fff;
+  }
+
+  .ns-category-card h3 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .ns-category-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, .78);
+  }
+
+  .ns-filter {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, minmax(128px, 1fr));
+    gap: 10px;
+    align-items: end;
+    padding: 14px;
+    margin-bottom: 24px;
+    border: 1px solid var(--ns-line);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(31, 39, 48, .06);
+  }
+
+  .ns-field {
+    display: grid;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .ns-field span {
+    color: var(--ns-muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .ns-field input,
+  .ns-field select,
+  .ns-field textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 12px;
+    border: 1px solid var(--ns-line);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--ns-text);
+    font: inherit;
+  }
+
+  .ns-field textarea {
+    min-height: 112px;
+    padding-top: 12px;
+    resize: vertical;
+  }
+
+  .ns-field input:focus,
+  .ns-field select:focus,
+  .ns-field textarea:focus {
+    border-color: var(--ns-orange);
+    outline: 3px solid rgba(255, 90, 20, .14);
+  }
+
+  .ns-category-section {
+    padding: 44px 0 54px;
+    border-top: 1px solid var(--ns-line);
+  }
+
+  .ns-category-section:first-of-type {
+    border-top: 0;
+  }
+
+  .ns-category-title {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
+    align-items: start;
+    margin-bottom: 18px;
+  }
+
+  .ns-category-title h3 {
+    margin: 0;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.08;
+  }
+
+  .ns-category-title p {
+    max-width: 760px;
+    margin: 10px 0 0;
+    color: var(--ns-muted);
+  }
+
+  .ns-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0 12px;
+    border-radius: 6px;
+    background: var(--ns-surface-2);
+    color: var(--ns-muted);
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .ns-carousel {
+    margin: 18px 0 26px;
+  }
+
+  .ns-carousel__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+
+  .ns-carousel__top h4 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .ns-carousel__buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  .ns-icon-button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--ns-line);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--ns-dark);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .ns-icon-button:hover,
+  .ns-icon-button:focus-visible {
+    border-color: var(--ns-orange);
+    outline: none;
+  }
+
+  .ns-carousel-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 42px) / 4);
+    gap: 14px;
+    overflow-x: auto;
+    padding: 2px 2px 14px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 2px;
+    overscroll-behavior-x: contain;
+    scrollbar-color: var(--ns-orange) var(--ns-surface-2);
+  }
+
+  .ns-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .ns-product-card {
+    display: grid;
+    grid-template-rows: 210px 1fr;
+    overflow: hidden;
+    min-width: 0;
+    border: 1px solid var(--ns-line);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(31, 39, 48, .06);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .ns-product-card--compact {
+    grid-template-rows: 178px 1fr;
+  }
+
+  .ns-product-card--compact .ns-product-card__body {
+    grid-template-rows: 94px auto auto 1fr;
+    gap: 12px;
+  }
+
+  .ns-product-card--compact .ns-product-card__body > div:first-child {
+    min-height: 94px;
+  }
+
+  .ns-product-card--compact .ns-meta {
+    min-height: 62px;
+    align-content: flex-start;
+  }
+
+  .ns-product-card--compact .ns-pill {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ns-product-card__image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    background: var(--ns-surface-2);
+  }
+
+  .ns-product-card__image img,
+  .ns-product-card__image svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .28s ease;
+  }
+
+  .ns-product-card:hover .ns-product-card__image img,
+  .ns-product-card:hover .ns-product-card__image svg {
+    transform: scale(1.03);
+  }
+
+  .ns-badge {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(23, 26, 29, .84);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .ns-product-card__body {
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .ns-product-card h4 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.18;
+  }
+
+  .ns-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .ns-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 0 9px;
+    border-radius: 6px;
+    background: var(--ns-surface-2);
+    color: var(--ns-muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .ns-specs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ns-specs li {
+    min-width: 0;
+    min-height: 58px;
+    padding: 10px;
+    border: 1px solid var(--ns-line);
+    border-radius: 6px;
+    background: #fbfcfd;
+  }
+
+  .ns-specs span {
+    display: block;
+    color: var(--ns-muted);
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .ns-specs b {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .ns-product-card--compact .ns-specs {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .ns-product-card--compact .ns-specs li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 62px;
+    min-height: 62px;
+    padding: 9px;
+    overflow: hidden;
+  }
+
+  .ns-product-card--compact .ns-specs span {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ns-product-card--compact .ns-specs b {
+    font-size: 13px;
+  }
+
+  .ns-description {
+    margin: 0;
+    color: var(--ns-muted);
+    font-size: 14px;
+  }
+
+  .ns-product-card__bottom {
+    display: grid;
+    gap: 12px;
+    align-self: end;
+  }
+
+  .ns-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .ns-price small {
+    color: var(--ns-muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .ns-card-actions {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+  }
+
+  .ns-link-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 14px;
+    border: 1px solid var(--ns-line);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--ns-dark);
+    font-weight: 800;
+  }
+
+  .ns-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .ns-info-item {
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .14);
+  }
+
+  .ns-info-item h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+
+  .ns-info-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, .74);
+  }
+
+  .ns-reviews,
+  .ns-news {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .ns-review,
+  .ns-news-card {
+    padding: 22px;
+    border: 1px solid var(--ns-line);
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .ns-review p,
+  .ns-news-card p {
+    margin: 0;
+    color: var(--ns-muted);
+  }
+
+  .ns-review b,
+  .ns-news-card b {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .ns-news-card time {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--ns-blue);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .ns-lead {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(340px, 1.1fr);
+    gap: 30px;
+    align-items: start;
+  }
+
+  .ns-lead__contacts {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .ns-contact-row {
+    display: grid;
+    gap: 4px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .18);
+  }
+
+  .ns-contact-row span {
+    color: rgba(255, 255, 255, .62);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  .ns-contact-row a,
+  .ns-contact-row b {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .ns-form {
+    display: grid;
+    gap: 12px;
+    padding: 24px;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ns-text);
+    box-shadow: var(--ns-shadow);
+  }
+
+  .ns-form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .ns-form .ns-field--full {
+    grid-column: 1 / -1;
+  }
+
+  .ns-status {
+    min-height: 22px;
+    margin: 0;
+    color: var(--ns-green);
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .ns-footer {
+    padding: 28px 0;
+    background: #171a1d;
+    color: rgba(255, 255, 255, .72);
+  }
+
+  .ns-footer__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .ns-empty {
+    display: none;
+    padding: 30px;
+    border: 1px dashed var(--ns-line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ns-muted);
+    text-align: center;
+  }
+
+  @media (max-width: 1040px) {
+    .ns-header__inner {
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 10px 0;
+    }
+
+    .ns-nav {
+      grid-column: 1 / -1;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding-bottom: 6px;
+    }
+
+    .ns-filter {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ns-filter .ns-field:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .ns-product-grid,
+    .ns-reviews,
+    .ns-news,
+    .ns-info-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ns-carousel-track {
+      grid-auto-columns: calc((100% - 14px) / 2);
+    }
+  }
+
+  @media (max-width: 760px) {
+    .ns-wrap {
+      width: min(100% - 22px, 1180px);
+    }
+
+    .ns-header__inner {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+
+    .ns-header__actions .ns-button {
+      display: none;
+    }
+
+    .ns-nav {
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+      justify-content: start;
+      gap: 8px 12px;
+      padding-bottom: 0;
+      overflow: hidden;
+    }
+
+    .ns-nav a {
+      padding: 4px 0;
+      font-size: 13px;
+      white-space: normal;
+    }
+
+    .ns-phone {
+      min-height: 38px;
+      padding: 0 10px;
+      font-size: 13px;
+    }
+
+    .ns-logo {
+      width: 112px;
+      height: 36px;
+    }
+
+    .ns-hero {
+      min-height: 72vh;
+    }
+
+    .ns-hero__inner {
+      padding: 64px 0 58px;
+    }
+
+    .ns-hero h1 {
+      max-width: 340px;
+      font-size: 38px;
+    }
+
+    .ns-hero__text {
+      width: min(360px, 100%);
+      font-size: 16px;
+    }
+
+    .ns-hero__facts,
+    .ns-section-head,
+    .ns-category-grid,
+    .ns-filter,
+    .ns-product-grid,
+    .ns-info-grid,
+    .ns-reviews,
+    .ns-news,
+    .ns-lead,
+    .ns-form__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ns-category-title {
+      grid-template-columns: 1fr;
+    }
+
+    .ns-carousel-track {
+      grid-auto-columns: 100%;
+    }
+
+    .ns-section {
+      padding: 54px 0;
+    }
+
+    .ns-category-section {
+      padding: 34px 0 42px;
+    }
+
+    .ns-product-card {
+      grid-template-rows: 190px 1fr;
+    }
+
+    .ns-card-actions {
+      grid-template-columns: 1fr;
+    }
+
+    .ns-footer__inner {
+      display: grid;
+    }
+  }
+</style>
+
+<div class="ns-site">
+  <header class="ns-header">
+    <div class="ns-wrap ns-header__inner">
+      <a href="#home" aria-label="Найсдорстрой">
+        <img class="ns-logo" src="logo.jpg" alt="Найсдорстрой">
+      </a>
+      <nav class="ns-nav" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#front">Фронтальные</a>
+        <a href="#tele">Телескопические</a>
+        <a href="#mini">Мини</a>
+        <a href="#company">О компании</a>
+        <a href="#lead">Заявка</a>
+      </nav>
+      <div class="ns-header__actions">
+        <a class="ns-phone" href="tel:+79226012113">8 922 601-21-13</a>
+        <a class="ns-button" href="#lead">Заказать</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="ns-hero" id="home">
+      
+      <div class="ns-wrap ns-hero__inner">
+        <p class="ns-eyebrow">Екатеринбург и Свердловская область</p>
+        <h1>Найсдорстрой</h1>
+        <p class="ns-hero__text">Каталог спецтехники для стройки, склада и коммунальных работ: фронтальные, телескопические и мини-погрузчики с подбором под задачу.</p>
+        <div class="ns-hero__actions">
+          <a class="ns-button" href="#catalog">Смотреть каталог</a>
+          <a class="ns-button ns-button--ghost" href="#lead">Быстрая заявка</a>
+        </div>
+        <div class="ns-hero__facts" aria-label="Преимущества">
+          <div class="ns-fact"><b>31</b><span>модель в каталоге</span></div>
+          <div class="ns-fact"><b>3</b><span>основные категории</span></div>
+          <div class="ns-fact"><b>16.07</b><span>дата прайса</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ns-section ns-section--white" aria-labelledby="category-title">
+      <div class="ns-wrap">
+        <div class="ns-section-head">
+          <div>
+            <p class="ns-eyebrow">Разделы каталога</p>
+            <h2 id="category-title">Спецтехника под разные строительные задачи</h2>
+          </div>
+          <p>Фронтальные модели закрывают основную погрузку, телескопические работают на высоте, мини-погрузчики помогают там, где важны компактность и маневренность.</p>
+        </div>
+        <div class="ns-category-grid">
+          <a class="ns-category-card" href="#front">
+            <div class="ns-category-card__visual"><img src="assets/zvezda-zl30f.jpg" alt="Фронтальный погрузчик"></div>
+            <span class="ns-category-card__content">
+              <h3>Фронтальные погрузчики</h3>
+              <p>Для грунта, щебня, снега, паллет и общих погрузочно-разгрузочных работ.</p>
+            </span>
+          </a>
+          <a class="ns-category-card" href="#tele">
+            <div class="ns-category-card__visual"><img src="assets/hero-t3000.jpeg" alt="Телескопический погрузчик"></div>
+            <span class="ns-category-card__content">
+              <h3>Телескопические погрузчики</h3>
+              <p>Для подачи материалов на высоту, стройплощадок, складов и сельхозработ.</p>
+            </span>
+          </a>
+          <a class="ns-category-card" href="#mini">
+            <div class="ns-category-card__visual"><img src="assets/iskra-zl15.jpg" alt="Мини-погрузчик"></div>
+            <span class="ns-category-card__content">
+              <h3>Мини-погрузчики</h3>
+              <p>Компактная техника для тесных площадок, дворов, складов и благоустройства.</p>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ns-section" id="catalog" aria-labelledby="catalog-title">
+      <div class="ns-wrap">
+        <div class="ns-section-head">
+          <div>
+            <p class="ns-eyebrow">Каталог техники</p>
+            <h2 id="catalog-title">Поиск, фильтры и популярные модели</h2>
+          </div>
+          <p>Цены указаны по присланному прайсу с курсом CNY 11.5136 руб. от 16.07.2026. Наличие, комплектацию и доставку лучше подтвердить перед заказом.</p>
+        </div>
+
+        <form class="ns-filter" id="nsFilter" aria-label="Фильтры каталога">
+          <label class="ns-field">
+            <span>Поиск</span>
+            <input id="nsSearch" type="search" placeholder="Модель, бренд, комплектация">
+          </label>
+          <label class="ns-field">
+            <span>Раздел</span>
+            <select id="nsCategory">
+              <option value="all">Все разделы</option>
+              <option value="front">Фронтальные</option>
+              <option value="tele">Телескопические</option>
+              <option value="mini">Мини</option>
+            </select>
+          </label>
+          <label class="ns-field">
+            <span>Производитель</span>
+            <select id="nsBrand">
+              <option value="all">Все бренды</option>
+              <option value="ZVEZDA">ZVEZDA</option>
+              <option value="VOLNA">VOLNA</option>
+              <option value="ISKRA">ISKRA</option>
+            </select>
+          </label>
+          <label class="ns-field">
+            <span>Цена</span>
+            <select id="nsPrice">
+              <option value="all">Любая цена</option>
+              <option value="1500000">До 1.5 млн</option>
+              <option value="2500000">До 2.5 млн</option>
+              <option value="3500000">До 3.5 млн</option>
+              <option value="over3500000">Выше 3.5 млн</option>
+            </select>
+          </label>
+          <label class="ns-field">
+            <span>Мощность</span>
+            <select id="nsPower">
+              <option value="all">Любая</option>
+              <option value="50">До 50 л.с.</option>
+              <option value="80">51-80 л.с.</option>
+              <option value="over80">Выше 80 л.с.</option>
+            </select>
+          </label>
+        </form>
+
+        <div class="ns-carousel">
+          <div class="ns-carousel__top">
+            <h3>Популярные модели</h3>
+            <div class="ns-carousel__buttons">
+              <button class="ns-icon-button" type="button" data-scroll="#popularTrack" data-dir="-1" aria-label="Назад">‹</button>
+              <button class="ns-icon-button" type="button" data-scroll="#popularTrack" data-dir="1" aria-label="Вперед">›</button>
+            </div>
+          </div>
+          <div class="ns-carousel-track" id="popularTrack"></div>
+        </div>
+
+        <p class="ns-empty" id="nsEmpty">По выбранным параметрам моделей не найдено.</p>
+        <div id="categorySections"></div>
+      </div>
+    </section>
+
+    <section class="ns-section ns-section--dark" id="company" aria-labelledby="company-title">
+      <div class="ns-wrap">
+        <div class="ns-section-head">
+          <div>
+            <p class="ns-eyebrow">О компании</p>
+            <h2 id="company-title">Найсдорстрой подбирает технику под объект, бюджет и условия работы</h2>
+          </div>
+          <p>Компания работает с частными заказчиками, строительными бригадами, складскими и коммунальными задачами. Можно обсудить комплектацию, навесное оборудование и доставку.</p>
+        </div>
+        <div class="ns-info-grid">
+          <div class="ns-info-item">
+            <h3>Подбор модели</h3>
+            <p>Сравнение по грузоподъемности, ковшу, высоте разгрузки и комплектации.</p>
+          </div>
+          <div class="ns-info-item">
+            <h3>Комплектация</h3>
+            <p>Кондиционер, сухой фен, джойстик, камера, гидролиния и другие опции.</p>
+          </div>
+          <div class="ns-info-item">
+            <h3>Документы</h3>
+            <p>Перед заказом уточняются ПСМ, РСТ, гарантия и предпродажная подготовка.</p>
+          </div>
+          <div class="ns-info-item">
+            <h3>Контакты</h3>
+            <p>Большой Исток, ул. Свердлова 40Е, Екатеринбург.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ns-section ns-section--white" aria-labelledby="reviews-title">
+      <div class="ns-wrap">
+        <div class="ns-section-head">
+          <div>
+            <p class="ns-eyebrow">Отзывы</p>
+            <h2 id="reviews-title">Что важно клиентам при выборе погрузчика</h2>
+          </div>
+          <p>Короткие отзывы для страницы можно заменить реальными историями после первых заявок и поставок.</p>
+        </div>
+        <div class="ns-reviews">
+          <article class="ns-review">
+            <b>Строительная бригада</b>
+            <p>Подобрали фронтальный погрузчик под щебень и планировку площадки. Отдельно помогли с ковшом и доп. гидролинией.</p>
+          </article>
+          <article class="ns-review">
+            <b>Склад стройматериалов</b>
+            <p>Нужна была компактная машина для тесной территории. Мини-погрузчик закрыл разгрузку паллет и уборку снега.</p>
+          </article>
+          <article class="ns-review">
+            <b>Подрядчик по благоустройству</b>
+            <p>Сравнили несколько моделей по бюджету и комплектации, быстро получили расчет и список доступных опций.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ns-section" aria-labelledby="news-title">
+      <div class="ns-wrap">
+        <div class="ns-section-head">
+          <div>
+            <p class="ns-eyebrow">Новости и статьи</p>
+            <h2 id="news-title">Полезные материалы о строительстве и спецтехнике</h2>
+          </div>
+          <p>Раздел помогает закрывать вопросы до звонка: выбор мощности, комплектации, шин, навесного оборудования и бюджета.</p>
+        </div>
+        <div class="ns-news">
+          <article class="ns-news-card">
+            <time datetime="2026-07-16">16 июля 2026</time>
+            <b>Как выбрать фронтальный погрузчик для стройплощадки</b>
+            <p>Грузоподъемность, объем ковша, высота разгрузки и тип работ, которые влияют на выбор модели.</p>
+          </article>
+          <article class="ns-news-card">
+            <time datetime="2026-07-16">16 июля 2026</time>
+            <b>Что добавить в комплектацию зимой</b>
+            <p>Сухой фен, предпусковой подогреватель, камера заднего вида и резина для сложных условий.</p>
+          </article>
+          <article class="ns-news-card">
+            <time datetime="2026-07-16">16 июля 2026</time>
+            <b>Мини-погрузчик или полноразмерная машина</b>
+            <p>Когда важнее маневренность, а когда лучше взять технику с большим ковшом и запасом по массе.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ns-section ns-section--dark" id="lead" aria-labelledby="lead-title">
+      <div class="ns-wrap ns-lead">
+        <div>
+          <p class="ns-eyebrow">Форма обратной связи</p>
+          <h2 id="lead-title">Оставьте заявку на покупку или подбор техники</h2>
+          <p>Менеджер уточнит задачу, бюджет, комплектацию и подготовит предложение по подходящим моделям.</p>
+          <div class="ns-lead__contacts">
+            <div class="ns-contact-row">
+              <span>Телефон</span>
+              <a href="tel:+79226012113">8 922 601-21-13</a>
+            </div>
+            <div class="ns-contact-row">
+              <span>Адрес</span>
+              <b>п. Большой Исток, ул. Свердлова 40Е, г. Екатеринбург</b>
+            </div>
+            <div class="ns-contact-row">
+              <span>Компания</span>
+              <b>Найсдорстрой</b>
+            </div>
+          </div>
+        </div>
+        <form class="ns-form" id="leadForm">
+          <input id="leadProduct" type="hidden" name="product" value="">
+          <div class="ns-form__grid">
+            <label class="ns-field">
+              <span>Имя</span>
+              <input id="leadName" name="name" type="text" placeholder="Ваше имя" required>
+            </label>
+            <label class="ns-field">
+              <span>Телефон</span>
+              <input id="leadPhone" name="phone" type="tel" placeholder="+7 ___ ___-__-__" required>
+            </label>
+            <label class="ns-field ns-field--full">
+              <span>Email</span>
+              <input id="leadEmail" name="email" type="email" placeholder="mail@example.ru">
+            </label>
+            <label class="ns-field ns-field--full">
+              <span>Заявка или вопрос</span>
+              <textarea id="leadMessage" name="message" placeholder="Например: нужна техника для стройплощадки, бюджет до 2.5 млн, интересует доставка"></textarea>
+            </label>
+          </div>
+          <button class="ns-button ns-button--wide" type="submit">Отправить</button>
+          <p class="ns-status" id="leadStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ns-footer">
+    <div class="ns-wrap ns-footer__inner">
+      <span>© Найсдорстрой, каталог спецтехники</span>
+      <span>Информация не является публичной офертой. Наличие и цены уточняются у менеджера.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const phone = "79226012113";
+  const categoryMeta = {
+    front: {
+      id: "front",
+      title: "Фронтальные погрузчики",
+      text: "Универсальные машины для погрузки грунта, щебня, снега, паллет и работы с навесным оборудованием."
+    },
+    tele: {
+      id: "tele",
+      title: "Телескопические погрузчики",
+      text: "Техника с выдвижной стрелой для подачи материалов на высоту и работы на строительных площадках."
+    },
+    mini: {
+      id: "mini",
+      title: "Мини-погрузчики",
+      text: "Компактные модели для ограниченных площадок, складов, дворов, коммунальных и ландшафтных работ."
+    }
+  };
+
+  const categoryImages = {
+    front: "assets/zvezda-zl30f.jpg",
+    tele: "assets/hero-t3000.jpeg",
+    mini: "assets/iskra-zl15.jpg"
+  };
+
+  const productImages = {
+    "ZVEZDA 35X PRO": "assets/zvezda-zl30f.jpg",
+    "ZVEZDA T2200": "assets/hero-t3000.jpeg",
+    "ZVEZDA T2500S": "assets/hero-t3000.jpeg",
+    "ZVEZDA T3000": "assets/hero-t3000.jpeg",
+    "ZVEZDA ZL20E (NEW)": "assets/zvezda-zl28f.jpg",
+    "ZVEZDA ZL20F (NEW)": "assets/zvezda-zl28f.jpg",
+    "ZVEZDA ZL28F": "assets/zvezda-zl28f.jpg",
+    "ZVEZDA ZL30F": "assets/zvezda-zl30f.jpg",
+    "VOLNA V05E": "assets/volna-v05e.jpg",
+    "VOLNA V05G": "assets/volna-v05g.jpg",
+    "VOLNA V101E": "assets/volna-v101e.jpeg",
+    "VOLNA V101G": "assets/volna-v101g.jpg",
+    "VOLNA V102E": "assets/volna-v102e.jpg",
+    "VOLNA V102G": "assets/volna-v102g.jpg",
+    "VOLNA V102TL": "assets/volna-v102tl.jpg",
+    "VOLNA V103G": "assets/volna-v103g.jpg",
+    "VOLNA V103TL": "assets/volna-v102tl.jpg",
+    "VOLNA V104": "assets/volna-v104.jpg",
+    "ISKRA ZL15": "assets/iskra-zl15.jpg",
+    "ISKRA ZL15F": "assets/iskra-zl15.jpg",
+    "ISKRA ZL15G": "assets/iskra-zl15g.jpg",
+    "ISKRA ZL20": "assets/iskra-zl20.jpeg",
+    "ISKRA ZL20 (NEW)": "assets/iskra-zl20.jpeg",
+    "ISKRA ZL20F (NEW)": "assets/iskra-zl20.jpeg",
+    "ISKRA ZL20F": "assets/iskra-zl20.jpeg",
+    "ISKRA ZL28": "assets/iskra-zl28.jpeg",
+    "ISKRA ZL28 (NEW)": "assets/iskra-zl28.jpeg",
+    "ISKRA ZL28F": "assets/iskra-zl28f.jpg",
+    "ISKRA ZL30": "assets/iskra-zl30.jpeg",
+    "ISKRA ZL30 (NEW)": "assets/iskra-zl30.jpeg",
+    "ISKRA ZL30F": "assets/iskra-zl30f.jpg"
+  };
+
+  const products = [
+    product("ZVEZDA 35X PRO", "ZVEZDA", "front", 5540000, "A/C, ковш 6 в 1", 3500, 1.8, 76, "Топ"),
+    product("ZVEZDA T2200", "ZVEZDA", "tele", 3070000, "Фронтальный телескоп, A/C", 2200, 1.2, 45, "Телескоп"),
+    product("ZVEZDA T2500S", "ZVEZDA", "tele", 5630000, "A/C, ковш и вилы, гидростатика", 2500, 1.5, 76, "Гидростатика"),
+    product("ZVEZDA T3000", "ZVEZDA", "tele", 6470000, "A/C, ковш и вилы, гидростатика Danfoss, захват", 3000, 2.2, 45, "Популярно"),
+    product("ZVEZDA ZL20E (NEW)", "ZVEZDA", "front", 2380000, "A/C, фен, гидроджойстик, электроуправление КПП и быстросъемом", 2000, 1.0, 76, "NEW"),
+    product("ZVEZDA ZL20F (NEW)", "ZVEZDA", "front", 2380000, "A/C, фен, гидроджойстик, электроуправление КПП и быстросъемом", 2000, 1.0, 76, "NEW"),
+    product("ZVEZDA ZL28F", "ZVEZDA", "front", 2850000, "A/C, фен, гидроджойстик, электроуправление КПП и быстросъемом", 2800, 1.5, 76, "В наличии"),
+    product("ZVEZDA ZL30F", "ZVEZDA", "front", 3190000, "A/C, фен, гидроджойстик, электроуправление КПП и быстросъемом", 3000, 1.8, 76, "Хит"),
+    product("VOLNA V05E", "VOLNA", "mini", 1580000, "Компактный дизельный мини-погрузчик", 1200, .8, 45, "Мини"),
+    product("VOLNA V05G", "VOLNA", "mini", 1580000, "Компактный дизельный мини-погрузчик", 1300, .8, 45, "Хит"),
+    product("VOLNA V101E", "VOLNA", "front", 1860000, "РСТ, крылья, регулируемая рулевая колонка, электронная панель, воздушное сиденье", 1800, 1.2, 45, "РСТ"),
+    product("VOLNA V101G", "VOLNA", "front", 1860000, "РСТ, крылья, регулируемая рулевая колонка, электронная панель, воздушное сиденье", 1800, 1.2, 45, "РСТ"),
+    product("VOLNA V102E", "VOLNA", "front", 2270000, "РСТ, крылья, регулируемая рулевая колонка, электронная панель, воздушное сиденье", 2700, 1.5, 45, "РСТ"),
+    product("VOLNA V102G", "VOLNA", "front", 2270000, "РСТ, крылья, регулируемая рулевая колонка, электронная панель, воздушное сиденье", 2700, 1.5, 45, "Хит"),
+    product("VOLNA V102TL", "VOLNA", "tele", 2770000, "A/C, фен, камера", 2700, 1.5, 45, "Новинка"),
+    product("VOLNA V103G", "VOLNA", "front", 2680000, "РСТ, крылья, регулируемая рулевая колонка, электронная панель, воздушное сиденье", 3000, 1.8, 45, "РСТ"),
+    product("VOLNA V103TL", "VOLNA", "tele", 3270000, "A/C, фен, камера", 3000, 1.8, 45, "Телескоп"),
+    product("VOLNA V104", "VOLNA", "front", 3330000, "A/C, фен, камера", 3300, 1.8, 45, "Большой"),
+    product("ISKRA ZL15", "ISKRA", "mini", 1290000, "Базовая комплектация", 1200, .8, 45, "Акция"),
+    product("ISKRA ZL15F", "ISKRA", "tele", 1490000, "Телескопический вариант, быстросъем", 1200, .8, 45, "Телескоп"),
+    product("ISKRA ZL15G", "ISKRA", "mini", 1370000, "Кабина ZL20", 1300, .9, 45, "Хит"),
+    product("ISKRA ZL20", "ISKRA", "front", 1390000, "Базовая комплектация", 2000, 1.0, 45, "Доступно"),
+    product("ISKRA ZL20 (NEW)", "ISKRA", "front", 1490000, "Новая кабина, капот, двигатель с турбиной", 2000, 1.0, 60, "NEW"),
+    product("ISKRA ZL20F (NEW)", "ISKRA", "front", 1490000, "Новая версия, базовая комплектация", 2000, 1.0, 60, "NEW"),
+    product("ISKRA ZL20F", "ISKRA", "front", 1790000, "LONG 4.2 м, быстросъем, увеличители, 76 кВт", 2000, 1.0, 103, "76 кВт"),
+    product("ISKRA ZL28", "ISKRA", "front", 1770000, "Базовая комплектация", 2800, 1.5, 60, "Склад"),
+    product("ISKRA ZL28 (NEW)", "ISKRA", "front", 1880000, "Новая кабина и капот", 2800, 1.5, 60, "NEW"),
+    product("ISKRA ZL28F", "ISKRA", "front", 2030000, "LONG 4.5 м, быстросъем, увеличители, 76 кВт", 2800, 1.5, 103, "76 кВт"),
+    product("ISKRA ZL30", "ISKRA", "front", 1970000, "Базовая комплектация", 3000, 1.8, 45, "Хит"),
+    product("ISKRA ZL30 (NEW)", "ISKRA", "front", 2080000, "Новая кабина и капот", 3000, 1.8, 60, "NEW"),
+    product("ISKRA ZL30F", "ISKRA", "front", 2290000, "LONG 4.5 м, быстросъем, увеличители, 76 кВт", 3000, 1.8, 103, "76 кВт")
+  ];
+
+  const popularNames = new Set(["ZVEZDA T3000", "ZVEZDA ZL30F", "VOLNA V05G", "VOLNA V102G", "VOLNA V102TL", "VOLNA V104", "ISKRA ZL15", "ISKRA ZL30F"]);
+
+  function product(name, brand, category, price, note, load, bucket, power, badge) {
+    const img = productImages[name] || categoryImages[category];
+    return { name, brand, category, price, note, load, bucket, power, img, badge };
+  }
+
+  function formatPrice(value) {
+    return new Intl.NumberFormat("ru-RU").format(value) + " ₽";
+  }
+
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    })[char]);
+  }
+
+  function visual(type) {
+    const body = type === "tele" ? "#ff7a2f" : type === "mini" ? "#22a7b5" : "#3f8ee8";
+    const boom = type === "tele" ? "M220 178 L346 70 L370 92 L258 216" : "M164 206 L292 166 L304 186 L178 232";
+    const bucket = type === "tele" ? "M346 66 L424 36 L442 84 L364 100 Z" : "M292 166 L382 154 L404 206 L314 218 Z";
+    const wheelScale = type === "mini" ? ".82" : "1";
+    return `
+      <svg viewBox="0 0 520 360" role="img" aria-label="Иллюстрация погрузчика">
+        <defs>
+          <linearGradient id="sky-${type}" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#cfe9ff"/>
+            <stop offset="1" stop-color="#eef7ff"/>
+          </linearGradient>
+          <linearGradient id="ground-${type}" x1="0" x2="1">
+            <stop offset="0" stop-color="#d9dde2"/>
+            <stop offset="1" stop-color="#f3f4f6"/>
+          </linearGradient>
+        </defs>
+        <rect width="520" height="360" fill="url(#sky-${type})"/>
+        <rect y="238" width="520" height="122" fill="url(#ground-${type})"/>
+        <rect x="28" y="214" width="116" height="34" rx="4" fill="#d3d7dd"/>
+        <rect x="42" y="190" width="78" height="24" rx="3" fill="#edf0f3"/>
+        <path d="M26 250 C110 232 190 230 280 242 C350 252 420 254 494 238 L520 360 L0 360 Z" fill="#c9ced6"/>
+        <path d="M142 212 L238 188 L306 224 L252 272 L132 262 Z" fill="${body}"/>
+        <path d="M174 150 L232 150 L266 220 L160 220 Z" fill="#1e2329"/>
+        <path d="M184 160 L224 160 L246 208 L172 208 Z" fill="#d9f0ff"/>
+        <path d="${boom}" fill="${body}"/>
+        <path d="${bucket}" fill="#191d22"/>
+        <g transform="translate(172 266) scale(${wheelScale}) translate(-172 -266)">
+          <circle cx="172" cy="266" r="42" fill="#191d22"/>
+          <circle cx="172" cy="266" r="22" fill="#59616b"/>
+          <circle cx="276" cy="266" r="52" fill="#191d22"/>
+          <circle cx="276" cy="266" r="27" fill="#59616b"/>
+        </g>
+        <path d="M126 236 L310 236" stroke="#101317" stroke-width="8" stroke-linecap="round"/>
+        <path d="M198 144 L198 120 L238 120" stroke="#191d22" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="238" cy="120" r="8" fill="#ffd36a"/>
+      </svg>
+    `;
+  }
+
+  function card(productItem, compact = false) {
+    const category = categoryMeta[productItem.category].title;
+    const loadLabel = compact ? "Г/п" : "Грузоподъемность";
+    return `
+      <article class="ns-product-card${compact ? " ns-product-card--compact" : ""}" data-product-card>
+        <div class="ns-product-card__image">
+          <img src="${escapeHtml(productItem.img)}" alt="${escapeHtml(productItem.name)}" loading="lazy">
+          <span class="ns-badge">${escapeHtml(productItem.badge)}</span>
+        </div>
+        <div class="ns-product-card__body">
+          <div>
+            <h4>${escapeHtml(productItem.name)}</h4>
+            <p class="ns-meta">
+              <span class="ns-pill">${escapeHtml(productItem.brand)}</span>
+              <span class="ns-pill">${escapeHtml(category)}</span>
+            </p>
+          </div>
+          <ul class="ns-specs">
+            <li><span>${loadLabel}</span><b>${productItem.load} кг</b></li>
+            <li><span>Ковш</span><b>${productItem.bucket} м³</b></li>
+            <li><span>Мощность</span><b>${productItem.power} л.с.</b></li>
+            <li><span>Двигатель</span><b>Дизель</b></li>
+          </ul>
+          <p class="ns-description">${escapeHtml(productItem.note)}</p>
+          <div class="ns-product-card__bottom">
+            <div class="ns-price">${formatPrice(productItem.price)} <small>с НДС</small></div>
+            <div class="ns-card-actions">
+              <button class="ns-button" type="button" data-order="${escapeHtml(productItem.name)}">Заказать</button>
+              <a class="ns-link-button" href="tel:+${phone}">Позвонить</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  function matches(productItem, filters) {
+    const text = `${productItem.name} ${productItem.brand} ${productItem.note} ${categoryMeta[productItem.category].title}`.toLowerCase();
+    const queryOk = !filters.query || text.includes(filters.query);
+    const categoryOk = filters.category === "all" || productItem.category === filters.category;
+    const brandOk = filters.brand === "all" || productItem.brand === filters.brand;
+    const priceOk = filters.price === "all" ||
+      (filters.price === "over3500000" ? productItem.price > 3500000 : productItem.price <= Number(filters.price));
+    const powerOk = filters.power === "all" ||
+      (filters.power === "over80" ? productItem.power > 80 :
+        filters.power === "80" ? productItem.power > 50 && productItem.power <= 80 :
+          productItem.power <= Number(filters.power));
+    return queryOk && categoryOk && brandOk && priceOk && powerOk;
+  }
+
+  function filters() {
+    return {
+      query: document.querySelector("#nsSearch").value.trim().toLowerCase(),
+      category: document.querySelector("#nsCategory").value,
+      brand: document.querySelector("#nsBrand").value,
+      price: document.querySelector("#nsPrice").value,
+      power: document.querySelector("#nsPower").value
+    };
+  }
+
+  function render() {
+    const active = filters();
+    const filtered = products.filter((item) => matches(item, active));
+    const popular = products.filter((item) => popularNames.has(item.name) && matches(item, active));
+    const popularTrack = document.querySelector("#popularTrack");
+    const sections = document.querySelector("#categorySections");
+    const empty = document.querySelector("#nsEmpty");
+
+    popularTrack.innerHTML = (popular.length ? popular : filtered.slice(0, 8)).map((item) => card(item, true)).join("");
+
+    sections.innerHTML = Object.values(categoryMeta).map((meta) => {
+      const items = filtered.filter((item) => item.category === meta.id);
+      if (!items.length) return "";
+      const categoryPopular = items.filter((item) => popularNames.has(item.name)).slice(0, 6);
+      const carouselItems = (categoryPopular.length ? categoryPopular : items.slice(0, 6)).map((item) => card(item, true)).join("");
+      return `
+        <section class="ns-category-section" id="${meta.id}">
+          <div class="ns-category-title">
+            <div>
+              <h3>${escapeHtml(meta.title)}</h3>
+              <p>${escapeHtml(meta.text)}</p>
+            </div>
+            <span class="ns-count">${items.length} моделей</span>
+          </div>
+          <div class="ns-carousel">
+            <div class="ns-carousel__top">
+              <h4>Популярные в разделе</h4>
+              <div class="ns-carousel__buttons">
+                <button class="ns-icon-button" type="button" data-scroll="#${meta.id}Track" data-dir="-1" aria-label="Назад">‹</button>
+                <button class="ns-icon-button" type="button" data-scroll="#${meta.id}Track" data-dir="1" aria-label="Вперед">›</button>
+              </div>
+            </div>
+            <div class="ns-carousel-track" id="${meta.id}Track">${carouselItems}</div>
+          </div>
+          <div class="ns-product-grid">${items.map((item) => card(item)).join("")}</div>
+        </section>
+      `;
+    }).join("");
+
+    empty.style.display = filtered.length ? "none" : "block";
+    bindOrderButtons();
+    bindCarouselButtons();
+  }
+
+  function bindOrderButtons() {
+    document.querySelectorAll("[data-order]").forEach((button) => {
+      button.onclick = () => {
+        const productName = button.getAttribute("data-order");
+        const message = document.querySelector("#leadMessage");
+        document.querySelector("#leadProduct").value = productName;
+        if (!message.value.trim()) {
+          message.value = `Интересует ${productName}. Подскажите наличие, комплектацию и итоговую стоимость.`;
+        }
+        document.querySelector("#lead").scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+    });
+  }
+
+  function bindCarouselButtons() {
+    function stepFor(track) {
+      const card = track.querySelector("[data-product-card]");
+      if (!card) return 0;
+      const gap = parseFloat(getComputedStyle(track).columnGap || "0");
+      return card.getBoundingClientRect().width + gap;
+    }
+
+    function snapTrack(track) {
+      const step = stepFor(track);
+      if (!step) return;
+      const index = Math.round(track.scrollLeft / step);
+      track.scrollTo({ left: index * step, behavior: "smooth" });
+    }
+
+    document.querySelectorAll(".ns-carousel-track").forEach((track) => {
+      if (track.dataset.snapBound) return;
+      track.dataset.snapBound = "true";
+      track.addEventListener("scroll", () => {
+        clearTimeout(track._snapTimer);
+        track._snapTimer = setTimeout(() => snapTrack(track), 140);
+      }, { passive: true });
+    });
+
+    document.querySelectorAll("[data-scroll]").forEach((button) => {
+      button.onclick = () => {
+        const track = document.querySelector(button.getAttribute("data-scroll"));
+        if (!track) return;
+        const dir = Number(button.getAttribute("data-dir") || 1);
+        const step = stepFor(track);
+        if (!step) return;
+        const index = Math.round(track.scrollLeft / step) + dir;
+        const maxIndex = Math.max(0, Math.ceil((track.scrollWidth - track.clientWidth) / step));
+        const nextIndex = Math.min(Math.max(index, 0), maxIndex);
+        track.scrollTo({ left: nextIndex * step, behavior: "smooth" });
+      };
+    });
+  }
+
+  function bindForm() {
+    document.querySelector("#leadForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const name = document.querySelector("#leadName").value.trim();
+      const contact = document.querySelector("#leadPhone").value.trim();
+      const email = document.querySelector("#leadEmail").value.trim();
+      const productName = document.querySelector("#leadProduct").value.trim();
+      const message = document.querySelector("#leadMessage").value.trim();
+      const text = [
+        "Заявка с сайта Найсдорстрой",
+        productName ? `Модель: ${productName}` : "",
+        `Имя: ${name}`,
+        `Телефон: ${contact}`,
+        email ? `Email: ${email}` : "",
+        message ? `Вопрос: ${message}` : ""
+      ].filter(Boolean).join("\n");
+      document.querySelector("#leadStatus").textContent = "Заявка подготовлена. Откроется WhatsApp для отправки.";
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    });
+  }
+
+  function init() {
+    document.querySelectorAll("[data-visual]").forEach((node) => {
+      node.innerHTML = visual(node.getAttribute("data-visual"));
+    });
+    render();
+    bindForm();
+    document.querySelector("#nsFilter").addEventListener("input", render);
+    document.querySelector("#nsFilter").addEventListener("change", render);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
