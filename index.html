@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Найсдорстрой - каталог спецтехники</title>
-  <meta name="description" content="Каталог фронтальных, телескопических и мини-погрузчиков для строительства от компании Найсдорстрой в Екатеринбурге.">
+  <title>NICE GROUP - каталог спецтехники</title>
+  <meta name="description" content="Каталог фронтальных, телескопических и мини-погрузчиков для строительства от компании NICE GROUP в Екатеринбурге.">
 </head>
 <body>
   
@@ -1030,8 +1030,8 @@
 <div class="ns-site">
   <header class="ns-header">
     <div class="ns-wrap ns-header__inner">
-      <a href="#home" aria-label="Найсдорстрой">
-        <img class="ns-logo" src="logo.jpg" alt="Найсдорстрой">
+      <a href="#home" aria-label="NICE GROUP">
+        <img class="ns-logo" src="logo.jpg" alt="NICE GROUP">
       </a>
       <nav class="ns-nav" aria-label="Основная навигация">
         <a href="#catalog">Каталог</a>
@@ -1053,7 +1053,7 @@
       
       <div class="ns-wrap ns-hero__inner">
         <p class="ns-eyebrow">Екатеринбург и Свердловская область</p>
-        <h1>Найсдорстрой</h1>
+        <h1>NICE GROUP</h1>
         <p class="ns-hero__text">Каталог спецтехники для стройки, склада и коммунальных работ: фронтальные, телескопические и мини-погрузчики с подбором под задачу.</p>
         <div class="ns-hero__actions">
           <a class="ns-button" href="#catalog">Смотреть каталог</a>
@@ -1177,7 +1177,7 @@
         <div class="ns-section-head">
           <div>
             <p class="ns-eyebrow">О компании</p>
-            <h2 id="company-title">Найсдорстрой подбирает технику под объект, бюджет и условия работы</h2>
+            <h2 id="company-title">NICE GROUP подбирает технику под объект, бюджет и условия работы</h2>
           </div>
           <p>Компания работает с частными заказчиками, строительными бригадами, складскими и коммунальными задачами. Можно обсудить комплектацию, навесное оборудование и доставку.</p>
         </div>
@@ -1274,40 +1274,28 @@
             </div>
             <div class="ns-contact-row">
               <span>Компания</span>
-              <b>Найсдорстрой</b>
+              <b>NICE GROUP</b>
             </div>
           </div>
         </div>
-        <form class="ns-form" id="leadForm">
-          <input id="leadProduct" type="hidden" name="product" value="">
-          <div class="ns-form__grid">
-            <label class="ns-field">
-              <span>Имя</span>
-              <input id="leadName" name="name" type="text" placeholder="Ваше имя" required>
-            </label>
-            <label class="ns-field">
-              <span>Телефон</span>
-              <input id="leadPhone" name="phone" type="tel" placeholder="+7 ___ ___-__-__" required>
-            </label>
-            <label class="ns-field ns-field--full">
-              <span>Email</span>
-              <input id="leadEmail" name="email" type="email" placeholder="mail@example.ru">
-            </label>
-            <label class="ns-field ns-field--full">
-              <span>Заявка или вопрос</span>
-              <textarea id="leadMessage" name="message" placeholder="Например: нужна техника для стройплощадки, бюджет до 2.5 млн, интересует доставка"></textarea>
-            </label>
-          </div>
-          <button class="ns-button ns-button--wide" type="submit">Отправить</button>
-          <p class="ns-status" id="leadStatus" aria-live="polite"></p>
-        </form>
+        <div class="ns-form ns-bitrix-form" id="leadFormHost">
+          <script data-b24-form="inline/24/3sv70v" data-skip-moving="true">
+            (function(w,d,u){
+              var s=d.createElement('script');
+              s.async=true;
+              s.src=u+'?'+(Date.now()/180000|0);
+              var h=d.getElementsByTagName('script')[0];
+              h.parentNode.insertBefore(s,h);
+            })(window,document,'https://cdn-ru.bitrix24.ru/b884915/crm/form/loader_24.js');
+          </script>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="ns-footer">
     <div class="ns-wrap ns-footer__inner">
-      <span>© Найсдорстрой, каталог спецтехники</span>
+      <span>© NICE GROUP, каталог спецтехники</span>
       <span>Информация не является публичной офертой. Наличие и цены уточняются у менеджера.</span>
     </div>
   </footer>
@@ -1576,12 +1564,6 @@
   function bindOrderButtons() {
     document.querySelectorAll("[data-order]").forEach((button) => {
       button.onclick = () => {
-        const productName = button.getAttribute("data-order");
-        const message = document.querySelector("#leadMessage");
-        document.querySelector("#leadProduct").value = productName;
-        if (!message.value.trim()) {
-          message.value = `Интересует ${productName}. Подскажите наличие, комплектацию и итоговую стоимость.`;
-        }
         document.querySelector("#lead").scrollIntoView({ behavior: "smooth", block: "start" });
       };
     });
@@ -1626,33 +1608,11 @@
     });
   }
 
-  function bindForm() {
-    document.querySelector("#leadForm").addEventListener("submit", (event) => {
-      event.preventDefault();
-      const name = document.querySelector("#leadName").value.trim();
-      const contact = document.querySelector("#leadPhone").value.trim();
-      const email = document.querySelector("#leadEmail").value.trim();
-      const productName = document.querySelector("#leadProduct").value.trim();
-      const message = document.querySelector("#leadMessage").value.trim();
-      const text = [
-        "Заявка с сайта Найсдорстрой",
-        productName ? `Модель: ${productName}` : "",
-        `Имя: ${name}`,
-        `Телефон: ${contact}`,
-        email ? `Email: ${email}` : "",
-        message ? `Вопрос: ${message}` : ""
-      ].filter(Boolean).join("\n");
-      document.querySelector("#leadStatus").textContent = "Заявка подготовлена. Откроется WhatsApp для отправки.";
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
-    });
-  }
-
   function init() {
     document.querySelectorAll("[data-visual]").forEach((node) => {
       node.innerHTML = visual(node.getAttribute("data-visual"));
     });
     render();
-    bindForm();
     document.querySelector("#nsFilter").addEventListener("input", render);
     document.querySelector("#nsFilter").addEventListener("change", render);
   }
